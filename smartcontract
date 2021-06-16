@@ -1,0 +1,28 @@
+//Begin
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.1;
+
+contract HREXAMEN {
+  string private message="You solved the challenge, the link is https://forms.gle/cueZYAHa85MEBrSD9";
+  string public message2;
+  address public owner;
+  mapping (address => bool) public whiteList;
+
+  constructor() {
+      owner = msg.sender;
+      whiteList[msg.sender] = true;
+  }
+  
+
+  function setQuote(string memory _message2) public {
+      _message2 = _message2;
+  }
+
+
+  function getQuote() public view returns (string memory) {
+      return message;
+  }
+
+
+}
+//End
